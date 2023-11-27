@@ -3,6 +3,8 @@ from node import Node
 
 if pytest.use_correct:
     from correct_python_programs.depth_first_search import depth_first_search
+elif pytest.use_custom:
+    from custom_python_programs.depth_first_search import depth_first_search
 else:
     from python_programs.depth_first_search import depth_first_search
 

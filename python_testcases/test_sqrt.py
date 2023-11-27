@@ -3,6 +3,8 @@ from load_testdata import load_json_testcases
 
 if pytest.use_correct:
     from correct_python_programs.sqrt import sqrt
+elif pytest.use_custom:
+    from custom_python_programs.sqrt import sqrt
 else:
     from python_programs.sqrt import sqrt
 

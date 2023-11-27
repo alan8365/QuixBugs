@@ -3,6 +3,8 @@ from load_testdata import load_json_testcases
 
 if pytest.use_correct:
     from correct_python_programs.sieve import sieve
+elif pytest.use_custom:
+    from custom_python_programs.sieve import sieve
 else:
     from python_programs.sieve import sieve
 
