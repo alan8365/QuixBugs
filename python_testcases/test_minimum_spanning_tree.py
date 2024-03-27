@@ -8,6 +8,7 @@ else:
     from python_programs.minimum_spanning_tree import minimum_spanning_tree
 
 
+@pytest.mark.timeout(2)
 def test1():
     """Case 1: Simple tree input.
     Output: (1, 2) (3, 4) (1, 4)
@@ -25,6 +26,7 @@ def test1():
     assert result == {(1, 2), (3, 4), (1, 4)}
 
 
+@pytest.mark.timeout(2)
 def test2():
     """Case 2: Strongly connected tree input.
     Output: (2, 5) (1, 3) (2, 3) (4, 6) (3, 6)
@@ -48,6 +50,7 @@ def test2():
     assert result == {(2, 5), (1, 3), (2, 3), (4, 6), (3, 6)}
 
 
+@pytest.mark.timeout(2)
 def test3():
     """Case 3: Minimum spanning tree input.
     Output: (1, 2) (1, 3) (2, 4)

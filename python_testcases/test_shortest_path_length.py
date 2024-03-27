@@ -27,6 +27,7 @@ length_by_edge = {
 }
 
 
+@pytest.mark.timeout(2)
 def test1():
     """Case 1: One path
     Output: 4
@@ -36,6 +37,7 @@ def test1():
     assert result == 4
 
 
+@pytest.mark.timeout(2)
 def test2():
     """Case 2: Multiple path
     Output: 7
@@ -45,6 +47,7 @@ def test2():
     assert result == 7
 
 
+@pytest.mark.timeout(2)
 def test3():
     """Case 3: Start point is same as end point
     Output: 0
@@ -54,6 +57,7 @@ def test3():
     assert result == 0
 
 
+@pytest.mark.timeout(2)
 def test4():
     """Case 4: Unreachable path
     Output: INT_MAX

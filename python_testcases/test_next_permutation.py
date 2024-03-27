@@ -13,5 +13,6 @@ testdata = load_json_testcases(next_permutation.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_next_permutation(input_data, expected):
     assert next_permutation(*input_data) == expected

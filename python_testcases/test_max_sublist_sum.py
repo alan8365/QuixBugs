@@ -13,5 +13,6 @@ testdata = load_json_testcases(max_sublist_sum.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_max_sublist_sum(input_data, expected):
     assert max_sublist_sum(*input_data) == expected

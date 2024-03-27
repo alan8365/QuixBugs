@@ -9,9 +9,13 @@ else:
     from python_programs.bitcount import bitcount
 
 
+
+
 testdata = load_json_testcases(bitcount.__name__)
+print(bitcount.__code__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_bitcount(input_data, expected):
     assert bitcount(*input_data) == expected

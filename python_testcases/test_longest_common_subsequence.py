@@ -13,5 +13,6 @@ testdata = load_json_testcases(longest_common_subsequence.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_longest_common_subsequence(input_data, expected):
     assert longest_common_subsequence(*input_data) == expected

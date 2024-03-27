@@ -13,5 +13,6 @@ testdata = load_json_testcases(wrap.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_wrap(input_data, expected):
     assert wrap(*input_data) == expected

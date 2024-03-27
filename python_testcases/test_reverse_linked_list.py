@@ -9,6 +9,7 @@ else:
     from python_programs.reverse_linked_list import reverse_linked_list
 
 
+@pytest.mark.timeout(2)
 def test1():
     """Case 1: 5-node list input
     Expected Output: 1 2 3 4 5
@@ -30,6 +31,7 @@ def test1():
     assert output == [1, 2, 3, 4, 5]
 
 
+@pytest.mark.timeout(2)
 def test2():
     """Case 2: 1-node list input
     Expected Output: 0
@@ -47,6 +49,7 @@ def test2():
     assert output == [0]
 
 
+@pytest.mark.timeout(2)
 def test3():
     """Case 3: None input
     Expected Output: None

@@ -13,5 +13,6 @@ testdata = load_json_testcases(kheapsort.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_kheapsort(input_data, expected):
     assert list(kheapsort(*input_data)) == expected

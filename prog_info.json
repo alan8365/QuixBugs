@@ -1,0 +1,282 @@
+[
+    {
+        "prog_id": 0,
+        "prog_name": "bitcount",
+        "fault_location": 3,
+        "bug_type": "",
+        "testcase_num": 9
+    },
+    {
+        "prog_id": 1,
+        "prog_name": "breadth_first_search",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 5
+    },
+    {
+        "prog_id": 2,
+        "prog_name": "bucketsort",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 7
+    },
+    {
+        "prog_id": 3,
+        "prog_name": "depth_first_search",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 5
+    },
+    {
+        "prog_id": 4,
+        "prog_name": "detect_cycle",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 6
+    },
+    {
+        "prog_id": 5,
+        "prog_name": "find_first_in_sorted",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 7
+    },
+    {
+        "prog_id": 6,
+        "prog_name": "find_in_sorted",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 7
+    },
+    {
+        "prog_id": 7,
+        "prog_name": "flatten",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 7
+    },
+    {
+        "prog_id": 8,
+        "prog_name": "gcd",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 6
+    },
+    {
+        "prog_id": 9,
+        "prog_name": "get_factors",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 11
+    },
+    {
+        "prog_id": 10,
+        "prog_name": "hanoi",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 8
+    },
+    {
+        "prog_id": 11,
+        "prog_name": "is_valid_parenthesization",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 3
+    },
+    {
+        "prog_id": 12,
+        "prog_name": "kheapsort",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 4
+    },
+    {
+        "prog_id": 13,
+        "prog_name": "knapsack",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 10
+    },
+    {
+        "prog_id": 14,
+        "prog_name": "kth",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 7
+    },
+    {
+        "prog_id": 15,
+        "prog_name": "lcs_length",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 9
+    },
+    {
+        "prog_id": 16,
+        "prog_name": "levenshtein",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 7
+    },
+    {
+        "prog_id": 17,
+        "prog_name": "lis",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 12
+    },
+    {
+        "prog_id": 18,
+        "prog_name": "longest_common_subsequence",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 10
+    },
+    {
+        "prog_id": 19,
+        "prog_name": "max_sublist_sum",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 6
+    },
+    {
+        "prog_id": 20,
+        "prog_name": "mergesort",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 14
+    },
+    {
+        "prog_id": 21,
+        "prog_name": "minimum_spanning_tree",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 3
+    },
+    {
+        "prog_id": 22,
+        "prog_name": "next_palindrome",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 5
+    },
+    {
+        "prog_id": 23,
+        "prog_name": "next_permutation",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 8
+    },
+    {
+        "prog_id": 24,
+        "prog_name": "pascal",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 5
+    },
+    {
+        "prog_id": 25,
+        "prog_name": "possible_change",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 10
+    },
+    {
+        "prog_id": 26,
+        "prog_name": "powerset",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 5
+    },
+    {
+        "prog_id": 27,
+        "prog_name": "quicksort",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 13
+    },
+    {
+        "prog_id": 28,
+        "prog_name": "reverse_linked_list",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 3
+    },
+    {
+        "prog_id": 29,
+        "prog_name": "rpn_eval",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 6
+    },
+    {
+        "prog_id": 30,
+        "prog_name": "shortest_path_length",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 4
+    },
+    {
+        "prog_id": 31,
+        "prog_name": "shortest_path_lengths",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 4
+    },
+    {
+        "prog_id": 32,
+        "prog_name": "shortest_paths",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 3
+    },
+    {
+        "prog_id": 33,
+        "prog_name": "shunting_yard",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 6
+    },
+    {
+        "prog_id": 34,
+        "prog_name": "sieve",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 6
+    },
+    {
+        "prog_id": 35,
+        "prog_name": "sqrt",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 7
+    },
+    {
+        "prog_id": 36,
+        "prog_name": "subsequences",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 12
+    },
+    {
+        "prog_id": 37,
+        "prog_name": "to_base",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 10
+    },
+    {
+        "prog_id": 38,
+        "prog_name": "topological_ordering",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 3
+    },
+    {
+        "prog_id": 39,
+        "prog_name": "wrap",
+        "fault_location": 0,
+        "bug_type": "",
+        "testcase_num": 5
+    }
+]

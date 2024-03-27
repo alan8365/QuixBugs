@@ -9,6 +9,7 @@ else:
     from python_programs.topological_ordering import topological_ordering
 
 
+@pytest.mark.timeout(2)
 def test1():
     """Case 1: Wikipedia graph
     Output: 5 7 3 11 8 10 2 9
@@ -44,6 +45,7 @@ def test1():
     assert result == [5, 7, 3, 11, 8, 10, 2, 9]
 
 
+@pytest.mark.timeout(2)
 def test2():
     """Case 2: GeekforGeeks example
     Output: 4 5 0 2 3 1
@@ -72,6 +74,7 @@ def test2():
     assert result == [4, 5, 0, 2, 3, 1]
 
 
+@pytest.mark.timeout(2)
 def test3():
     """Case 3: Cooking with InteractivePython"""
 

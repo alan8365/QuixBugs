@@ -13,5 +13,6 @@ testdata = load_json_testcases(subsequences.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_subsequences(input_data, expected):
     assert subsequences(*input_data) == expected

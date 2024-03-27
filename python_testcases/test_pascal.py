@@ -13,5 +13,6 @@ testdata = load_json_testcases(pascal.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_pascal(input_data, expected):
     assert pascal(*input_data) == expected

@@ -13,5 +13,6 @@ testdata = load_json_testcases(powerset.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_powerset(input_data, expected):
     assert powerset(*input_data) == expected

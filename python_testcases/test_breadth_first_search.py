@@ -1,4 +1,5 @@
 import pytest
+
 from node import Node
 
 if pytest.use_correct:

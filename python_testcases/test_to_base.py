@@ -13,5 +13,6 @@ testdata = load_json_testcases(to_base.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_to_base(input_data, expected):
     assert to_base(*input_data) == expected

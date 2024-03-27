@@ -13,5 +13,6 @@ testdata = load_json_testcases(lis.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_lis(input_data, expected):
     assert lis(*input_data) == expected

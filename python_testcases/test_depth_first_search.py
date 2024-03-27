@@ -1,4 +1,5 @@
 import pytest
+
 from node import Node
 
 if pytest.use_correct:
@@ -9,6 +10,7 @@ else:
     from python_programs.depth_first_search import depth_first_search
 
 
+@pytest.mark.timeout(2)
 def test1():
     """Case 1: Strongly connected graph
     Output: Path found!
@@ -26,6 +28,7 @@ def test1():
     assert path_found
 
 
+@pytest.mark.timeout(2)
 def test2():
     """Case 2: Branching graph
     Output: Path found!
@@ -43,6 +46,7 @@ def test2():
     assert path_found
 
 
+@pytest.mark.timeout(2)
 def test3():
     """Case 3: Two unconnected nodes in graph
     Output: Path not found
@@ -56,6 +60,7 @@ def test3():
     assert not path_found
 
 
+@pytest.mark.timeout(2)
 def test4():
     """Case 4: One node graph
     Output: Path found!
@@ -68,6 +73,7 @@ def test4():
     assert path_found
 
 
+@pytest.mark.timeout(2)
 def test5():
     """Case 5: Graph with cycles
     Output: Path found!

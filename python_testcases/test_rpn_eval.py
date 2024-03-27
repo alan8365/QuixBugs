@@ -13,5 +13,6 @@ testdata = load_json_testcases(rpn_eval.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_rpn_eval(input_data, expected):
     assert rpn_eval(*input_data) == expected

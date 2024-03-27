@@ -13,5 +13,6 @@ testdata = load_json_testcases(shunting_yard.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_shunting_yard(input_data, expected):
     assert shunting_yard(*input_data) == expected

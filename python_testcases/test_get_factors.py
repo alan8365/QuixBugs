@@ -13,5 +13,6 @@ testdata = load_json_testcases(get_factors.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_get_factors(input_data, expected):
     assert get_factors(*input_data) == expected

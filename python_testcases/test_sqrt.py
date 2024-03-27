@@ -13,5 +13,6 @@ testdata = load_json_testcases(sqrt.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_sqrt(input_data, expected):
     assert sqrt(*input_data) == pytest.approx(expected, abs=input_data[-1])

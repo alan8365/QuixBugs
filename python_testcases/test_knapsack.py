@@ -13,6 +13,7 @@ testdata = load_json_testcases(knapsack.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_knapsack(input_data, expected):
     if not pytest.run_slow and input_data == [
         6404180,

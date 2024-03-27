@@ -13,5 +13,6 @@ testdata = load_json_testcases(flatten.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
+@pytest.mark.timeout(2)
 def test_flatten(input_data, expected):
     assert list(flatten(*input_data)) == expected
