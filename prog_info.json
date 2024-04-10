@@ -4,69 +4,79 @@
         "prog_name": "bitcount",
         "fault_location": 3,
         "bug_type": "",
+        "bug_detail_desc": "應該用and運算卻用成xor",
         "testcase_num": 9
     },
     {
         "prog_id": 1,
         "prog_name": "breadth_first_search",
-        "fault_location": 11,
+        "fault_location": 9,
         "bug_type": "",
+        "bug_detail_desc": "使用while True導致迴圈不停，應該使用while queue讓佇列數量為0時脫離迴圈",
         "testcase_num": 5
     },
     {
         "prog_id": 2,
         "prog_name": "bucketsort",
-        "fault_location": 0,
+        "fault_location": 6,
         "bug_type": "",
+        "bug_detail_desc": "for迴圈中把遍歷的目標誤用為原本的陣列arr，而非標記陣列中元素數量的count",
         "testcase_num": 7
     },
     {
         "prog_id": 3,
         "prog_name": "depth_first_search",
-        "fault_location": 0,
+        "fault_location": 9,
         "bug_type": "",
+        "bug_detail_desc": "沒有紀錄已經造訪過的節點",
         "testcase_num": 5
     },
     {
         "prog_id": 4,
         "prog_name": "detect_cycle",
-        "fault_location": 0,
+        "fault_location": 5,
         "bug_type": "",
+        "bug_detail_desc": "沒有處理hare也是空值的狀況，只有處理hare的後繼是空值的狀況，hare剛好是空值時會報錯",
         "testcase_num": 6
     },
     {
         "prog_id": 5,
         "prog_name": "find_first_in_sorted",
-        "fault_location": 0,
+        "fault_location": 4,
         "bug_type": "",
+        "bug_detail_desc": "錯誤考慮了lo==hi的狀況，導致如目標不在陣列中情況會無窮迴圈",
         "testcase_num": 7
     },
     {
         "prog_id": 6,
         "prog_name": "find_in_sorted",
-        "fault_location": 0,
+        "fault_location": 8,
         "bug_type": "",
+        "bug_detail_desc": "在目標大於中點時，新陣列起始序號mid沒有+1，導致邊緣情況遞迴不會停止",
         "testcase_num": 7
     },
     {
         "prog_id": 7,
         "prog_name": "flatten",
-        "fault_location": 0,
+        "fault_location": 6,
         "bug_type": "",
+        "bug_detail_desc": "對於不是list的輸入依舊使用遞迴，導致大部分輸出不是預期的元素",
         "testcase_num": 7
     },
     {
         "prog_id": 8,
         "prog_name": "gcd",
-        "fault_location": 0,
+        "fault_location": 4,
         "bug_type": "",
+        "bug_detail_desc": "最後的遞迴沒有交換數字的位置，使得b的位置始終保持不變，導致遞迴不會停止",
         "testcase_num": 6
     },
     {
         "prog_id": 9,
         "prog_name": "get_factors",
-        "fault_location": 0,
+        "fault_location": 8,
         "bug_type": "",
+        "bug_detail_desc": "在輸入是質數時僅回傳空陣列而非包含數字本身的陣列，導致質數的分解出錯且遞迴的影響幾乎所有輸入",
         "testcase_num": 11
     },
     {
@@ -74,6 +84,7 @@
         "prog_name": "hanoi",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 8
     },
     {
@@ -81,6 +92,7 @@
         "prog_name": "is_valid_parenthesization",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 3
     },
     {
@@ -88,6 +100,7 @@
         "prog_name": "kheapsort",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 4
     },
     {
@@ -95,6 +108,7 @@
         "prog_name": "knapsack",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 10
     },
     {
@@ -102,6 +116,7 @@
         "prog_name": "kth",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 7
     },
     {
@@ -109,6 +124,7 @@
         "prog_name": "lcs_length",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 9
     },
     {
@@ -116,6 +132,7 @@
         "prog_name": "levenshtein",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 7
     },
     {
@@ -123,6 +140,7 @@
         "prog_name": "lis",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 12
     },
     {
@@ -130,6 +148,7 @@
         "prog_name": "longest_common_subsequence",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 10
     },
     {
@@ -137,6 +156,7 @@
         "prog_name": "max_sublist_sum",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 6
     },
     {
@@ -144,6 +164,7 @@
         "prog_name": "mergesort",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 14
     },
     {
@@ -151,6 +172,7 @@
         "prog_name": "minimum_spanning_tree",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 3
     },
     {
@@ -158,6 +180,7 @@
         "prog_name": "next_palindrome",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 5
     },
     {
@@ -165,6 +188,7 @@
         "prog_name": "next_permutation",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 8
     },
     {
@@ -172,6 +196,7 @@
         "prog_name": "pascal",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 5
     },
     {
@@ -179,6 +204,7 @@
         "prog_name": "possible_change",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 10
     },
     {
@@ -186,6 +212,7 @@
         "prog_name": "powerset",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 5
     },
     {
@@ -193,6 +220,7 @@
         "prog_name": "quicksort",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 13
     },
     {
@@ -200,6 +228,7 @@
         "prog_name": "reverse_linked_list",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 3
     },
     {
@@ -207,6 +236,7 @@
         "prog_name": "rpn_eval",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 6
     },
     {
@@ -214,6 +244,7 @@
         "prog_name": "shortest_path_length",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 4
     },
     {
@@ -221,6 +252,7 @@
         "prog_name": "shortest_path_lengths",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 4
     },
     {
@@ -228,6 +260,7 @@
         "prog_name": "shortest_paths",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 3
     },
     {
@@ -235,6 +268,7 @@
         "prog_name": "shunting_yard",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 6
     },
     {
@@ -242,6 +276,7 @@
         "prog_name": "sieve",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 6
     },
     {
@@ -249,6 +284,7 @@
         "prog_name": "sqrt",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 7
     },
     {
@@ -256,6 +292,7 @@
         "prog_name": "subsequences",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 12
     },
     {
@@ -263,6 +300,7 @@
         "prog_name": "to_base",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 10
     },
     {
@@ -270,6 +308,7 @@
         "prog_name": "topological_ordering",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 3
     },
     {
@@ -277,6 +316,7 @@
         "prog_name": "wrap",
         "fault_location": 0,
         "bug_type": "",
+        "bug_detail_desc": "",
         "testcase_num": 5
     }
 ]
