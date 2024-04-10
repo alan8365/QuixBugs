@@ -9,8 +9,6 @@ else:
     from python_programs.bitcount import bitcount
 
 
-
-
 testdata = load_json_testcases(bitcount.__name__)
 print(bitcount.__code__)
 

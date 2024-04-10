@@ -9,7 +9,7 @@
     {
         "prog_id": 1,
         "prog_name": "breadth_first_search",
-        "fault_location": 0,
+        "fault_location": 11,
         "bug_type": "",
         "testcase_num": 5
     },
