@@ -284,39 +284,39 @@
         "prog_name": "sqrt",
         "fault_location": 2,
         "bug_type": "",
-        "bug_detail_desc": "",
+        "bug_detail_desc": "誤差計算時，忘記把approx平方，造成誤差計算的是x跟根號x的差，導致除了x=1或epsilon很大的情況外計算都不會停下",
         "testcase_num": 7
     },
     {
         "prog_id": 36,
         "prog_name": "subsequences",
-        "fault_location": 0,
+        "fault_location": 2,
         "bug_type": "",
-        "bug_detail_desc": "",
+        "bug_detail_desc": "k=0時的回傳不包含一個空陣列，造成遞迴的最後一層長度為0並且淺層呼叫也都為0，導致除了k非零且a>b的情況外的輸入皆會出錯",
         "testcase_num": 12
     },
     {
         "prog_id": 37,
         "prog_name": "to_base",
-        "fault_location": 0,
+        "fault_location": 7,
         "bug_type": "",
-        "bug_detail_desc": "",
+        "bug_detail_desc": "結果計算時，先計算出的是低位的結果，但是字串拼接時錯置了result跟新位的位置，造成得到的結果都是相反的，導致除迴文數外的結果都是錯誤的",
         "testcase_num": 10
     },
     {
         "prog_id": 38,
         "prog_name": "topological_ordering",
-        "fault_location": 0,
+        "fault_location": 5,
         "bug_type": "",
-        "bug_detail_desc": "",
+        "bug_detail_desc": "在判斷節點能否排進ordered_nodes時，把incoming寫成outgoing，造成除了沒有incoming節點的初始節點外沒有節點能被排序進來，導致輸入有邊圖皆會出錯",
         "testcase_num": 3
     },
     {
         "prog_id": 39,
         "prog_name": "wrap",
-        "fault_location": 0,
+        "fault_location": 9,
         "bug_type": "",
-        "bug_detail_desc": "",
+        "bug_detail_desc": "在回傳前缺少append text，造成回傳結果缺少最後一段，導致空值以外的輸入結果皆會出錯",
         "testcase_num": 5
     }
 ]
