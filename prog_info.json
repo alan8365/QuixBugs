@@ -4,7 +4,7 @@
         "prog_name": "bitcount",
         "fault_location": 3,
         "bug_type": "",
-        "bug_detail_desc": "應該用and運算卻用成xor",
+        "bug_detail_desc": "在運算消除n中的1時，應該用and運算卻用成xor，造成原本應該能消掉1的步驟變成n只能保持不變，導致while迴圈無限循環",
         "testcase_num": 9
     },
     {
@@ -12,7 +12,7 @@
         "prog_name": "breadth_first_search",
         "fault_location": 9,
         "bug_type": "",
-        "bug_detail_desc": "使用while True導致迴圈不停，應該使用while queue讓佇列數量為0時脫離迴圈",
+        "bug_detail_desc": "在while迴圈的判斷式中，應該使用while queue讓佇列數量為0時脫離迴圈卻錯用為while True，導致迴圈無限循環無法停止",
         "testcase_num": 5
     },
     {
@@ -20,7 +20,7 @@
         "prog_name": "bucketsort",
         "fault_location": 6,
         "bug_type": "",
-        "bug_detail_desc": "for迴圈中把遍歷的目標誤用為原本的陣列arr，而非標記陣列中元素數量的count",
+        "bug_detail_desc": "在for迴圈中把遍歷的目標誤用為原本的陣列arr，而非標記陣列中元素數量的count，導致除非要排序的陣列和count一模一樣否則皆會出錯",
         "testcase_num": 7
     },
     {
@@ -28,7 +28,7 @@
         "prog_name": "depth_first_search",
         "fault_location": 9,
         "bug_type": "",
-        "bug_detail_desc": "沒有紀錄已經造訪過的節點",
+        "bug_detail_desc": "在向深處搜尋時，沒有紀錄已經造訪過的節點，導致除馬上找到goalnode以外的狀況遞迴都無法停止",
         "testcase_num": 5
     },
     {
@@ -36,7 +36,7 @@
         "prog_name": "detect_cycle",
         "fault_location": 5,
         "bug_type": "",
-        "bug_detail_desc": "沒有處理hare也是空值的狀況，只有處理hare的後繼是空值的狀況，hare剛好是空值時會報錯",
+        "bug_detail_desc": "在判斷終止情況時，沒有處理hare也是空值的狀況，只有處理hare的後繼是空值的狀況，導致hare剛好是空值時會觸發AttributeError",
         "testcase_num": 6
     },
     {
@@ -44,7 +44,7 @@
         "prog_name": "find_first_in_sorted",
         "fault_location": 4,
         "bug_type": "",
-        "bug_detail_desc": "錯誤考慮了lo==hi的狀況，導致如目標不在陣列中情況會無窮迴圈",
+        "bug_detail_desc": "在whlie判斷式中，錯誤考慮了lo==hi的狀況，導致如目標不在陣列中的情況會無窮迴圈",
         "testcase_num": 7
     },
     {
@@ -60,7 +60,7 @@
         "prog_name": "flatten",
         "fault_location": 6,
         "bug_type": "",
-        "bug_detail_desc": "對於不是list的輸入依舊使用遞迴，導致大部分輸出不是預期的元素",
+        "bug_detail_desc": "在遞回的終止條件回傳時，對於不是list的輸入依舊使用遞迴，導致大部分輸出不是預期的元素",
         "testcase_num": 7
     },
     {
@@ -68,7 +68,7 @@
         "prog_name": "gcd",
         "fault_location": 4,
         "bug_type": "",
-        "bug_detail_desc": "最後的遞迴沒有交換數字的位置，使得b的位置始終保持不變，導致遞迴不會停止",
+        "bug_detail_desc": "在遞迴呼叫時，沒有交換數字的位置，使得b的位置始終保持不變，導致遞迴不會停止",
         "testcase_num": 6
     },
     {
@@ -84,7 +84,7 @@
         "prog_name": "hanoi",
         "fault_location": 5,
         "bug_type": "",
-        "bug_detail_desc": "步驟二中的交換把end寫成helper，使func無法交換到最後目標上，導致大部分情況都只能給出錯誤答案",
+        "bug_detail_desc": "在步驟二中的交換把end寫成helper，使func無法交換到最後目標上，導致大部分情況都只能給出錯誤答案",
         "testcase_num": 8
     },
     {
@@ -116,7 +116,7 @@
         "prog_name": "kth",
         "fault_location": 11,
         "bug_type": "",
-        "bug_detail_desc": "處理到k存在於大於pivot的陣列above時，遞迴呼叫沒有將k的輸入根據num_lessoreq重置，導致在該類狀況中k總是代表超過陣列的位置",
+        "bug_detail_desc": "在處理到k存在於大於pivot的陣列above時，遞迴呼叫沒有將k的輸入根據num_lessoreq重置，導致在該類狀況中k總是代表超過陣列的位置",
         "testcase_num": 7
     },
     {
@@ -124,7 +124,7 @@
         "prog_name": "lcs_length",
         "fault_location": 8,
         "bug_type": "",
-        "bug_detail_desc": "動態規劃陣列計算中，子問題的選擇時j沒有減一，造成動態規劃只會在一個維度中取值，導致除了答案小於1以外的輸入皆會出錯",
+        "bug_detail_desc": "在動態規劃陣列計算中，子問題的選擇時j沒有減一，造成動態規劃只會在一個維度中取值，導致除了答案小於1以外的輸入皆會出錯",
         "testcase_num": 9
     },
     {
@@ -204,7 +204,7 @@
         "prog_name": "possible_change",
         "fault_location": 3,
         "bug_type": "",
-        "bug_detail_desc": "缺少處理硬幣沒有輸入的邊界狀況，導致沒有輸入硬幣種類時由於無法unpack coins變數觸發ValueError",
+        "bug_detail_desc": "在處理邊界狀況時，缺少處理硬幣沒有輸入的邊界狀況，導致沒有輸入硬幣種類時由於無法unpack coins變數觸發ValueError",
         "testcase_num": 10
     },
     {
@@ -284,7 +284,7 @@
         "prog_name": "sqrt",
         "fault_location": 2,
         "bug_type": "",
-        "bug_detail_desc": "誤差計算時，忘記把approx平方，造成誤差計算的是x跟根號x的差，導致除了x=1或epsilon很大的情況外計算都不會停下",
+        "bug_detail_desc": "在誤差計算時，忘記把approx平方，造成誤差計算的是x跟根號x的差，導致除了x=1或epsilon很大的情況外計算都不會停下",
         "testcase_num": 7
     },
     {
@@ -292,7 +292,7 @@
         "prog_name": "subsequences",
         "fault_location": 2,
         "bug_type": "",
-        "bug_detail_desc": "k=0時的回傳不包含一個空陣列，造成遞迴的最後一層長度為0並且淺層呼叫也都為0，導致除了k非零且a>b的情況外的輸入皆會出錯",
+        "bug_detail_desc": "在處理k=0時的回傳時，缺少包含一個空陣列，造成遞迴的最後一層長度為0並且淺層呼叫也都為0，導致除了k非零且a>b的情況外的輸入皆會出錯",
         "testcase_num": 12
     },
     {
@@ -300,7 +300,7 @@
         "prog_name": "to_base",
         "fault_location": 7,
         "bug_type": "",
-        "bug_detail_desc": "結果計算時，先計算出的是低位的結果，但是字串拼接時錯置了result跟新位的位置，造成得到的結果都是相反的，導致除迴文數外的結果都是錯誤的",
+        "bug_detail_desc": "在結果計算時，先計算出的是低位的結果，但是字串拼接時錯置了result跟新位的位置，造成得到的結果都是相反的，導致除迴文數外的結果都是錯誤的",
         "testcase_num": 10
     },
     {
