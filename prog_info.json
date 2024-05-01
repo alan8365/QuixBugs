@@ -34,7 +34,7 @@
     {
         "prog_id": 4,
         "prog_name": "detect_cycle",
-        "fault_location": 5,
+        "fault_location": 4,
         "bug_type": "",
         "bug_detail_desc": "在判斷終止情況時，沒有處理hare也是空值的狀況，只有處理hare的後繼是空值的狀況，導致hare剛好是空值時會觸發AttributeError",
         "testcase_num": 6
@@ -154,10 +154,10 @@
     {
         "prog_id": 19,
         "prog_name": "max_sublist_sum",
-        "fault_location": 4,
+        "fault_location": 5,
         "bug_type": "",
         "bug_detail_desc": "在更改max_ending_here時，沒有加上max函數，造成計算總是考慮到整個list而沒有歸零機制，導致只能處理答案是整個list相加或sublist在前期出現的狀況",
-        "testcase_num": 6
+        "testcase_num": 7
     },
     {
         "prog_id": 20,
@@ -234,7 +234,7 @@
     {
         "prog_id": 29,
         "prog_name": "rpn_eval",
-        "fault_location": 19,
+        "fault_location": 18,
         "bug_type": "",
         "bug_detail_desc": "在運算並放回stack時，忽略了stack中第一個pop的元素是擺在運算式後的元素，導致運算不符合交換律的輸入時皆會錯誤",
         "testcase_num": 6
@@ -242,7 +242,7 @@
     {
         "prog_id": 30,
         "prog_name": "shortest_path_length",
-        "fault_location": 19,
+        "fault_location": 21,
         "bug_type": "",
         "bug_detail_desc": "在動態規劃更新節點距離時，沒有加上起點到前一節點的距離，導致除了起點終點相同和起點終點不可達等特殊情況以外的輸入都無法獲得正確結果",
         "testcase_num": 4
@@ -250,7 +250,7 @@
     {
         "prog_id": 31,
         "prog_name": "shortest_path_lengths",
-        "fault_location": 10,
+        "fault_location": 12,
         "bug_type": "",
         "bug_detail_desc": "在計算以k為中繼連結ij的距離時，將i到k、k到j誤寫為i到k、j到k，導致非無向圖結構的輸入結果皆會出錯",
         "testcase_num": 4
@@ -314,7 +314,7 @@
     {
         "prog_id": 39,
         "prog_name": "wrap",
-        "fault_location": 9,
+        "fault_location": 8,
         "bug_type": "",
         "bug_detail_desc": "在回傳前缺少append text，造成回傳結果缺少最後一段，導致空值以外的輸入結果皆會出錯",
         "testcase_num": 5
