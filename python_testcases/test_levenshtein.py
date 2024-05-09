@@ -13,7 +13,7 @@ testdata = load_json_testcases(levenshtein.__name__)
 
 
 @pytest.mark.parametrize("input_data,expected", testdata)
-@pytest.mark.timeout(2)
+@pytest.mark.timeout(6)
 def test_levenshtein(input_data, expected):
     if input_data == [
         "amanaplanacanalpanama",

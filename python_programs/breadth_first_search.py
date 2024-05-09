@@ -18,6 +18,7 @@ def breadth_first_search(startnode, goalnode):
             nodesseen.update(node.successors)
 
     return False
+    
 
 
 

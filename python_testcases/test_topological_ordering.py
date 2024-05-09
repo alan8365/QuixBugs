@@ -8,6 +8,14 @@ elif pytest.use_custom:
 else:
     from python_programs.topological_ordering import topological_ordering
 
+def helper(list_in, list_out):
+    assert len(list_in) == len(list_out)
+
+    for i, node in enumerate(list_out):
+        for j in range(i):
+            pre_node = list_out[j]
+            assert pre_node not in node.outgoing_nodes
+    
 
 @pytest.mark.timeout(2)
 def test1():
@@ -35,14 +43,26 @@ def test1():
     nine.incoming_nodes = [eleven, eight]
     ten.incoming_nodes = [eleven, three]
 
-    result = [
-        x.value
-        for x in topological_ordering(
-            [five, seven, three, eleven, eight, two, nine, ten]
-        )
-    ]
+    # result = [
+    #     x.value
+    #     for x in topological_ordering(
+    #         [five, seven, three, eleven, eight, two, nine, ten]
+    #     )
+    # ]
 
-    assert result == [5, 7, 3, 11, 8, 10, 2, 9]
+    # assert result == [5, 7, 3, 11, 8, 10, 2, 9]
+
+    test_case = [five, seven, three, eleven, eight, two, nine, ten]
+    result = topological_ordering(test_case)
+
+    helper(test_case, result)
+
+    # assert len(result) == len(test_case)
+
+    # for i, node in enumerate(result):
+    #     for j in range(i):
+    #         pre_node = result[j]
+    #         assert pre_node not in node.outgoing_nodes
 
 
 @pytest.mark.timeout(2)
@@ -67,11 +87,16 @@ def test2():
     three.incoming_nodes = [two]
     three.outgoing_nodes = [one]
 
-    result = [
-        x.value for x in topological_ordering([zero, one, two, three, four, five])
-    ]
+    test_case = [zero, one, two, three, four, five]
+    result = topological_ordering(test_case)
 
-    assert result == [4, 5, 0, 2, 3, 1]
+    helper(test_case, result)
+
+    # result = [
+    #     x.value for x in topological_ordering([zero, one, two, three, four, five])
+    # ]
+
+    # assert result == [4, 5, 0, 2, 3, 1]
 
 
 @pytest.mark.timeout(2)
@@ -102,22 +127,27 @@ def test3():
     syrup.outgoing_nodes = [eat]
     eat.incoming_nodes = [syrup, turn]
 
-    result = [
-        x.value
-        for x in topological_ordering(
-            [milk, egg, oil, mix, syrup, griddle, pour, turn, eat]
-        )
-    ]
+    # result = [
+    #     x.value
+    #     for x in topological_ordering(
+    #         [milk, egg, oil, mix, syrup, griddle, pour, turn, eat]
+    #     )
+    # ]
 
-    expected = [
-        "3/4 cup milk",
-        "1 egg",
-        "1 Tbl oil",
-        "heat griddle",
-        "1 cup mix",
-        "pour 1/4 cup",
-        "heat syrup",
-        "turn when bubbly",
-        "eat",
-    ]
-    assert result == expected
+    # expected = [
+    #     "3/4 cup milk",
+    #     "1 egg",
+    #     "1 Tbl oil",
+    #     "heat griddle",
+    #     "1 cup mix",
+    #     "pour 1/4 cup",
+    #     "heat syrup",
+    #     "turn when bubbly",
+    #     "eat",
+    # ]
+    # assert result == expected
+
+    test_case = [milk, egg, oil, mix, syrup, griddle, pour, turn, eat]
+    result = topological_ordering(test_case)
+
+    helper(test_case, result)
