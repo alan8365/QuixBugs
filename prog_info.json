@@ -74,7 +74,7 @@
         "prog_name": "flatten",
         "fault_location": 6,
         "bug_type": "function misuse fault",
-        "bug_consequence": "格式錯誤",
+        "bug_consequence": "format error",
         "bug_impact": "base-case impact",
         "bug_detail_desc": "在遞回的終止條件回傳時，對於不是list的輸入依舊使用遞迴，導致大部分輸出不是預期的格式",
         "testcase_num": 7
@@ -86,7 +86,7 @@
         "bug_type": "variable misuse fault",
         "bug_consequence": "infinite loop error",
         "bug_impact": "base-case impact",
-        "bug_detail_desc": "在遞迴呼叫時，沒有交換數字的位置，使得b的位置始終保持不變，導致遞迴不會停止",
+        "bug_detail_desc": "在遞迴呼叫時，沒有交換數字的位置，使得b的位置始終保持不變，導致除b=0外的情況外遞迴不會停止",
         "testcase_num": 6
     },
     {
@@ -96,7 +96,7 @@
         "bug_type": "variable assign fault",
         "bug_consequence": "output error",
         "bug_impact": "base-case impact",
-        "bug_detail_desc": "在輸入是質數時僅回傳空陣列而非包含數字本身的陣列，導致質數的分解出錯且遞迴的影響幾乎所有輸入",
+        "bug_detail_desc": "在輸入是質數時僅回傳空陣列而非包含數字本身的陣列，導致質數的分解出錯且遞迴的影響除1以外的所有輸入",
         "testcase_num": 11
     },
     {
@@ -224,7 +224,7 @@
         "prog_name": "next_palindrome",
         "fault_location": 14,
         "bug_type": "variable assign fault",
-        "bug_consequence": "output error",
+        "bug_consequence": "format error",
         "bug_impact": "edge-case impact",
         "bug_detail_desc": "在如999這類需要進位的輸入而進入最後一個進位處理邏輯時，沒有將原始位數-1造成回傳結果多一位，導致類似邊緣情況的輸入無法獲得正確輸出",
         "testcase_num": 5
@@ -394,7 +394,7 @@
         "prog_name": "wrap",
         "fault_location": 8,
         "bug_type": "variable assign missing fault",
-        "bug_consequence": "格式錯誤",
+        "bug_consequence": "format error",
         "bug_impact": "all-case impact",
         "bug_detail_desc": "在回傳前缺少append text，造成回傳結果缺少最後一段，導致空值以外的輸入結果皆會出錯",
         "testcase_num": 5
