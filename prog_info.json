@@ -95,7 +95,7 @@
         "fault_location": 8,
         "bug_type": "variable assign fault",
         "bug_consequence": "output error",
-        "bug_impact": "base-case impact",
+        "bug_impact": "edge-case impact",
         "bug_detail_desc": "在輸入是質數時僅回傳空陣列而非包含數字本身的陣列，導致質數的分解出錯且遞迴的影響除1以外的所有輸入",
         "testcase_num": 11
     },
@@ -105,8 +105,8 @@
         "fault_location": 5,
         "bug_type": "variable misuse fault",
         "bug_consequence": "output error",
-        "bug_impact": "base-case impact",
-        "bug_detail_desc": "在步驟二中的交換把end寫成helper，使func無法交換到最後目標上，導致大部分情況都只能給出錯誤答案",
+        "bug_impact": "all-case impact",
+        "bug_detail_desc": "在步驟二中的交換把end寫成helper，使func無法交換到最後目標上，導致height=0之外的情況只能給出錯誤答案",
         "testcase_num": 8
     },
     {
@@ -115,8 +115,8 @@
         "fault_location": 10,
         "bug_type": "variable assign fault",
         "bug_consequence": "output error",
-        "bug_impact": "base-case impact",
-        "bug_detail_desc": "在遍歷完字串後直接回傳True而沒有考慮到depth大於1時仍非合法的狀況，導致最後depth大於1的輸入皆會出錯",
+        "bug_impact": "edge-case impact",
+        "bug_detail_desc": "在遍歷完字串後直接回傳True而沒有考慮到depth大於1時仍非合法的狀況，導致最後depth大於1且輸出應是true的輸入皆會出錯",
         "testcase_num": 3
     },
     {
@@ -135,8 +135,8 @@
         "fault_location": 10,
         "bug_type": "condition fault",
         "bug_consequence": "output error",
-        "bug_impact": "base-case impact",
-        "bug_detail_desc": "在寫動態規劃的陣列時，沒有考慮到weight剛好等於容納上限的狀況，導致該類邊緣狀況輸出錯誤答案",
+        "bug_impact": "edge-case impact",
+        "bug_detail_desc": "在寫動態規劃的陣列時，沒有考慮到weight剛好等於容納上限的狀況，導致輸出內有機會觸發該類邊緣狀況時輸出錯誤答案",
         "testcase_num": 9
     },
     {
@@ -146,7 +146,7 @@
         "bug_type": "variable assign fault",
         "bug_consequence": "runtime error",
         "bug_impact": "base-case impact",
-        "bug_detail_desc": "在處理到k存在於大於pivot的陣列above時，遞迴呼叫沒有將k的輸入根據num_lessoreq重置，導致在該類狀況中k總是代表超過陣列的位置",
+        "bug_detail_desc": "在處理到k存在於大於pivot的陣列above時，遞迴呼叫沒有將k的輸入根據num_lessoreq重置，導致在該類狀況中k總是代表超過陣列的位置觸發IndexError",
         "testcase_num": 7
     },
     {
@@ -205,7 +205,7 @@
         "fault_location": 15,
         "bug_type": "condition fault",
         "bug_consequence": "infinite loop error",
-        "bug_impact": "base-case impact",
+        "bug_impact": "all-case impact",
         "bug_detail_desc": "在遞迴的終止狀況判斷中，沒有考慮到只有一個元素時也無法切為左右兩個陣列，導致遞迴無法停止",
         "testcase_num": 14
     },
@@ -255,7 +255,7 @@
         "fault_location": 3,
         "bug_type": "condition missing fault",
         "bug_consequence": "runtime error",
-        "bug_impact": "base-case impact",
+        "bug_impact": "edge-case impact",
         "bug_detail_desc": "在處理邊界狀況時，缺少處理硬幣沒有輸入的邊界狀況，導致沒有輸入硬幣種類時由於無法unpack coins變數觸發ValueError",
         "testcase_num": 10
     },
@@ -285,7 +285,7 @@
         "fault_location": 5,
         "bug_type": "variable assign missing fault",
         "bug_consequence": "output error",
-        "bug_impact": "base-case impact",
+        "bug_impact": "all-case impact",
         "bug_detail_desc": "在置換node的successor時，沒有將node賦值給prevnode，造成prevnode一直是空值且所有node的新successor都是空值，導致除了輸入空值外的所有情況都會錯誤",
         "testcase_num": 3
     },
@@ -365,7 +365,7 @@
         "fault_location": 2,
         "bug_type": "variable assign fault",
         "bug_consequence": "output error",
-        "bug_impact": "base-case impact",
+        "bug_impact": "edge-case impact",
         "bug_detail_desc": "在處理k=0時的回傳時，缺少包含一個空陣列，造成遞迴的最後一層長度為0並且淺層呼叫也都為0，導致除了k非零且a>b的情況外的輸入皆會出錯",
         "testcase_num": 12
     },
