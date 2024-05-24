@@ -25,8 +25,8 @@
         "fault_location": 6,
         "bug_type": "variable misuse fault",
         "bug_consequence": "output error",
-        "bug_impact": "base-case impact",
-        "bug_detail_desc": "在for迴圈中把遍歷的目標誤用為原本的陣列arr，而非標記陣列中元素數量的count，導致除非要排序的陣列和count一模一樣否則皆會出錯",
+        "bug_impact": "all-case impact",
+        "bug_detail_desc": "在for迴圈中把遍歷的目標誤用為原本的陣列arr，而非標記陣列中元素數量的count，然而不可能構造一個跟count一樣的arr，導致全部出錯",
         "testcase_num": 7
     },
     {
@@ -95,8 +95,8 @@
         "fault_location": 8,
         "bug_type": "variable assign fault",
         "bug_consequence": "output error",
-        "bug_impact": "edge-case impact",
-        "bug_detail_desc": "在輸入是質數時僅回傳空陣列而非包含數字本身的陣列，導致質數的分解出錯且遞迴的影響除1以外的所有輸入",
+        "bug_impact": "base-case impact",
+        "bug_detail_desc": "在輸入是質數時僅回傳空陣列而非包含數字本身的陣列，造成輸出總是少了最後一個數，導致質數的分解出錯且遞迴的影響除1以外的所有輸入",
         "testcase_num": 11
     },
     {
@@ -116,7 +116,7 @@
         "bug_type": "variable assign fault",
         "bug_consequence": "output error",
         "bug_impact": "edge-case impact",
-        "bug_detail_desc": "在遍歷完字串後直接回傳True而沒有考慮到depth大於1時仍非合法的狀況，導致最後depth大於1且輸出應是true的輸入皆會出錯",
+        "bug_detail_desc": "在遍歷完字串後直接回傳True而沒有考慮到depth大於1時仍非合法的狀況，造成輸出偏向true，導致最後depth大於1的輸入皆會出錯",
         "testcase_num": 3
     },
     {
@@ -126,7 +126,7 @@
         "bug_type": "indexing fault",
         "bug_consequence": "output error",
         "bug_impact": "base-case impact",
-        "bug_detail_desc": "在遍歷陣列時沒有排除已經在heap中的元素，導致除了k為0以外的輸入皆會產生錯誤",
+        "bug_detail_desc": "在遍歷陣列時沒有排除已經在heap中的元素，造成輸出比輸入多出3個元素且排序失效，導致除了k為0以外的輸入皆會產生錯誤",
         "testcase_num": 4
     },
     {
@@ -136,7 +136,7 @@
         "bug_type": "condition fault",
         "bug_consequence": "output error",
         "bug_impact": "edge-case impact",
-        "bug_detail_desc": "在寫動態規劃的陣列時，沒有考慮到weight剛好等於容納上限的狀況，導致輸出內有機會觸發該類邊緣狀況時輸出錯誤答案",
+        "bug_detail_desc": "在寫動態規劃的陣列時，沒有考慮到weight剛好等於容納上限的狀況，造成輸出比預期小一點，導致輸出內有機會觸發該類邊緣狀況時輸出錯誤答案",
         "testcase_num": 9
     },
     {
